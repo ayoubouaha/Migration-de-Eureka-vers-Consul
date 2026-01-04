@@ -1,0 +1,67 @@
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: SERVICE-CLIENT
+        health-check-path: /actuator/health
+        health-check-interval: 10s
+  application:
+    name: SERVICE-CLIENT
+  datasource:
+    url: jdbc:h2:mem:clientdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+
+server:
+  port: 8088
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+#spring:
+#  cloud:
+#    consul:
+#      host: localhost
+#      port: 8500
+#      discovery:
+#        service-name: SERVICE-CLIENT
+#        health-check-path: /actuator/health
+#        health-check-interval: 10s
+#  application:
+#    name: SERVICE-CLIENT
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/Micro_ClientDB?createDatabaseIfNotExist=true
+#    username: root
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        format_sql: true
+#
+#server:
+#  port: 8088
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: health,info
