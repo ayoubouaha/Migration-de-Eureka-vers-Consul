@@ -21,9 +21,9 @@ Le projet est composé de 4 microservices principaux :
 
 
 Image:
+illustre l'architecture complète du système microservices avec tous les services en cours d'exécution.
 
-(Screens/2.png)
 
-Cette capture d'écran illustre l'architecture complète du système microservices avec tous les services en cours d'exécution.
-Elle montre la communication entre les différents services via le Gateway et leur enregistrement dans Consul pour la découverte de services.
+<img width="1920" height="1017" alt="2" src="https://github.com/user-attachments/assets/3038d7f3-d525-431b-8be3-53e9af5f96b7" />
+
 
